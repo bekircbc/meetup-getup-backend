@@ -1,6 +1,6 @@
 @API_URL = http://localhost:4589
 
-@TOKEN = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzQzZWI5NWU1MWQzMTU3MTUwNDIxYjgiLCJuYW1lIjoiQmVraXIiLCJlbWFpbCI6ImJrckBleGFtcGxlLmNvbSIsImlzQWRtaW4iOnRydWUsInBhc3N3b3JkIjoiJDJhJDEwJHFLNDhvV2pSTUlhMWNzWTM0RWlLcmVyNU1EaTY4QUZUVG1uVWlXWXpvOTRVcDJjN1hkVnEyIiwiaWF0IjoxNjY1NjQ4MTczLCJleHAiOjE2NjgyNDAxNzN9.a3H7IClTTUkMVIDcbexz-tXOVccwThvmnDJMAzJ8AHs
+@TOKEN = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzYwMTkxYTU3ZjE0ZDBmMWNkNzljZTMiLCJlbWFpbCI6Im1pa2VAZXhhbXBsZS5jb20iLCJpc0FkbWluIjp0cnVlLCJwYXNzd29yZCI6IiQyYSQxMCRHM0lLOW9hd2paTExJdkxLZVRrSDVlZjU2MThRL29MSG95eUs0SDZvT0p2dEh6UHNZQUFwaSIsImlhdCI6MTY2NzI0MzkxMCwiZXhwIjoxNjY5ODM1OTEwfQ.ZVw7Qop5hN6vHz4s9DoIqke-r71oWGsYJlLpmQVoJw4
 
 ### PRODUCTS ROUTE +++
 GET {{API_URL}}/api/meetups
@@ -19,7 +19,7 @@ GET {{API_URL}}/api/meetups/63353b9d7850fcb381794d11
 GET {{API_URL}}/api/meetups/search?category=all&query=all&price=all&rating=all&order=newest&page=29
 
 ### PRODUCT SEARCH ROUTE +++
-GET {{API_URL}}/api/products/search?category=furniture&query=all&price=all&rating=all&order=newest&page=1
+GET {{API_URL}}/api/meetups/search?category=furniture&query=all&price=all&rating=all&order=newest&page=1
 
 ### PRODUCT SEARCH ROUTE +++
 GET {{API_URL}}/api/meetups/search?query=iphone&category=all&price=all
@@ -46,9 +46,13 @@ POST {{API_URL}}/api/users/signin
 Content-type:application/json
 
 {
-    "email":"hbingley1@plala.or.jp",
-    "password": "gf5498fsglö?++df3489!!fds23"
+    "email":"mike@example.com",
+    "password": "asd45ert34"
 }
+### Users ROUTE +++
+GET {{API_URL}}/api/users
+Content-type:application/json
+Authorization : {{TOKEN}}
 
 ### SIGNIN ROUTE +++
 POST {{API_URL}}/api/users/signin
