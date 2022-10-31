@@ -1,5 +1,16 @@
 import mongoose from "mongoose";
 import validator from "validator";
+// import Meetup from "./meetupModel.js";
+
+// const favoriteSchema = new mongoose.Schema(
+//   {
+//     type: mongoose.Schema.Types.ObjectId,
+//     ref: { Meetup },
+//   },
+//   {
+//     timestamps: true,
+//   }
+// );
 
 const userSchema = new mongoose.Schema(
   {
@@ -25,11 +36,7 @@ const userSchema = new mongoose.Schema(
         "User groups is very important to reach right field in our app!",
       ],
     },
-    userFavorites: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Meetup",
-      required: true,
-    },
+    // userFavorites: [favoriteSchema],
   },
   {
     timestamps: true,

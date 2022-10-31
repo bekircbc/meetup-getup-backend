@@ -12,14 +12,18 @@ const data = {
       userFavorites: [],
     },
     {
-      name: "kanka32",
+      userName: "kanka32",
+      firstName: "Knk",
+      lastName: "Alzer",
       email: "kanka32@example.com",
       password: bcrypt.hashSync("asd45ert34"),
       isAdmin: false,
       userFavorites: [],
     },
     {
-      name: "lover64",
+      userName: "lover64",
+      firstName: "Knk",
+      lastName: "Alzer",
       email: "lover64@example.com",
       password: bcrypt.hashSync("asd45ert34"),
       isAdmin: true,
@@ -64,6 +68,8 @@ const data = {
         "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Buildings_in_Amsterdam_IMG_5153.jpg/800px-Buildings_in_Amsterdam_IMG_5153.jpg",
       ],
       adress: "Meetupstreet5, 12345 Meetup City",
+      category: "Meetup",
+
       description:
         "This is an amazing meetup which you definitely should not miss.",
       reviews: [
@@ -92,6 +98,8 @@ const data = {
       title: "Düsseldorf",
       images: ["https://picsum.photos/520/460"],
       adress: "Meetupstreet5, 12345 Meetup City",
+      category: "Meetup",
+
       description:
         "This is an amazing meetup which you definitely should not miss.",
       reviews: [
@@ -118,10 +126,12 @@ const data = {
     },
     {
       title: "Berlin",
-      imageUrl: "https://picsum.photos/521/461",
+      images: ["https://picsum.photos/521/461"],
       adress: "Meetupstreet5, 12345 Meetup City",
       description:
         "This is an amazing meetup which you definitely should not miss.",
+      category: "Meetup",
+
       reviews: [
         {
           userName: "lover64",
@@ -150,6 +160,8 @@ const data = {
       adress: "Meetupstreet5, 12345 Meetup City",
       description:
         "This is an amazing meetup which you definitely should not miss.",
+      category: "Meetup",
+
       reviews: [
         {
           userName: "lover64",

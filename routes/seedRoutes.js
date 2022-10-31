@@ -15,9 +15,9 @@ seedRouter.get("/", async (req, res) => {
       meetup.averageRating = Math.ceil(averageRating * 100) / 100;
     }
   });
-  await Meetup.remove({});
+  await Meetup.deleteMany({});
   const createdMeetups = await Meetup.insertMany(data.meetups);
-  await User.remove({});
+  await User.deleteMany({});
   const createdUsers = await User.insertMany(data.users);
   res.send({ createdMeetups, createdUsers });
 });

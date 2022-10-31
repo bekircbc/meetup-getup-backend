@@ -1,39 +1,39 @@
-@API_URL = http://localhost:3484
+@API_URL = http://localhost:4589
 
 @TOKEN = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzQzZWI5NWU1MWQzMTU3MTUwNDIxYjgiLCJuYW1lIjoiQmVraXIiLCJlbWFpbCI6ImJrckBleGFtcGxlLmNvbSIsImlzQWRtaW4iOnRydWUsInBhc3N3b3JkIjoiJDJhJDEwJHFLNDhvV2pSTUlhMWNzWTM0RWlLcmVyNU1EaTY4QUZUVG1uVWlXWXpvOTRVcDJjN1hkVnEyIiwiaWF0IjoxNjY1NjQ4MTczLCJleHAiOjE2NjgyNDAxNzN9.a3H7IClTTUkMVIDcbexz-tXOVccwThvmnDJMAzJ8AHs
 
 ### PRODUCTS ROUTE +++
-GET {{API_URL}}/api/products
+GET {{API_URL}}/api/meetups
 
 ### CATEGORIES ROUTE +++
-GET {{API_URL}}/api/products/categories
+GET {{API_URL}}/api/meetups/categories
 
 
 ### PRODUCTID ROUTE +++
-GET {{API_URL}}/api/products/63280ac3ar92d3452f5e161c
+GET {{API_URL}}/api/meetups/63280ac3ar92d3452f5e161c
 
 ### PRODUCTID ROUTE +++
-GET {{API_URL}}/api/products/63353b9d7850fcb381794d11
+GET {{API_URL}}/api/meetups/63353b9d7850fcb381794d11
 
 ### PRODUCT SEARCH ROUTE +++
-GET {{API_URL}}/api/products/search?category=all&query=all&price=all&rating=all&order=newest&page=29
+GET {{API_URL}}/api/meetups/search?category=all&query=all&price=all&rating=all&order=newest&page=29
 
 ### PRODUCT SEARCH ROUTE +++
 GET {{API_URL}}/api/products/search?category=furniture&query=all&price=all&rating=all&order=newest&page=1
 
 ### PRODUCT SEARCH ROUTE +++
-GET {{API_URL}}/api/products/search?query=iphone&category=all&price=all
+GET {{API_URL}}/api/meetups/search?query=iphone&category=all&price=all
 
 
 ### PRODUCT SEARCH ROUTE +++
-GET {{API_URL}}/api/products/search?query=all&category=all&price=all&pageSize=6
+GET {{API_URL}}/api/meetups/search?query=all&category=all&price=all&pageSize=6
 
 ### PRODUCT SLUG ROUTE +++
-GET {{API_URL}}/api/products/slug/epson-printer
+GET {{API_URL}}/api/meetups/slug/epson-printer
 
 
 ### PRODUCT SLUG ROUTE +++
-GET {{API_URL}}/api/products/slug/2
+GET {{API_URL}}/api/meetups/slug/2
 
 ### SEED ROUTE +++
 ############### ATTENTION - DO NOT USE ###################
@@ -73,7 +73,7 @@ Content-type:application/json
 }
 
 ### POST NEW PRODUCT ROUTE +++
-POST {{API_URL}}/api/products
+POST {{API_URL}}/api/meetups
 Content-type:application/json
 Authorization : Bearer {{TOKEN}}
 
@@ -110,7 +110,7 @@ Authorization : Bearer {{TOKEN}}
 }
 
 ### UPDATE PRODUCT ROUTE +++
-PUT {{API_URL}}/api/products/633154e59afb0c41836f1350
+PUT {{API_URL}}/api/meetups/633154e59afb0c41836f1350
 Content-type:application/json
 Authorization : Bearer {{TOKEN}}
 
@@ -128,7 +128,7 @@ Authorization : Bearer {{TOKEN}}
 }
 
 ### DELETE PRODUCT ROUTE +++
-DELETE {{API_URL}}/api/products/633154e59afb0c41836f1350
+DELETE {{API_URL}}/api/meetups/633154e59afb0c41836f1350
 Content-type:application/json
 Authorization : Bearer {{TOKEN}}
 
