@@ -25,7 +25,7 @@ const userSchema = new mongoose.Schema(
         "User groups is very important to reach right field in our app!",
       ],
     },
-    Favorites: {
+    userFavorites: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Meetup",
       required: true,
