@@ -6,7 +6,7 @@ import path from "path";
 
 // import productRouter from "./routes/productRoutes.js";
 
-// import seedRouter from "./routes/seedRoutes.js";
+import seedRouter from "./routes/seedRoutes.js";
 
 // import orderRouter from "./routes/orderRoutes.js";
 
@@ -30,7 +30,7 @@ app.use(
 
 app.set("trust proxy", 1);
 
-// app.use("/api/seed", seedRouter);
+app.use("/api/seed", seedRouter);
 // app.use("/api/products", productRouter);
 // app.use("/api/users", userRouter);
 // app.use("/api/orders", orderRouter);
