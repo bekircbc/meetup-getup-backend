@@ -1,0 +1,134 @@
+@API_URL = http://localhost:3484
+
+@TOKEN = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzQzZWI5NWU1MWQzMTU3MTUwNDIxYjgiLCJuYW1lIjoiQmVraXIiLCJlbWFpbCI6ImJrckBleGFtcGxlLmNvbSIsImlzQWRtaW4iOnRydWUsInBhc3N3b3JkIjoiJDJhJDEwJHFLNDhvV2pSTUlhMWNzWTM0RWlLcmVyNU1EaTY4QUZUVG1uVWlXWXpvOTRVcDJjN1hkVnEyIiwiaWF0IjoxNjY1NjQ4MTczLCJleHAiOjE2NjgyNDAxNzN9.a3H7IClTTUkMVIDcbexz-tXOVccwThvmnDJMAzJ8AHs
+
+### PRODUCTS ROUTE +++
+GET {{API_URL}}/api/products
+
+### CATEGORIES ROUTE +++
+GET {{API_URL}}/api/products/categories
+
+
+### PRODUCTID ROUTE +++
+GET {{API_URL}}/api/products/63280ac3ar92d3452f5e161c
+
+### PRODUCTID ROUTE +++
+GET {{API_URL}}/api/products/63353b9d7850fcb381794d11
+
+### PRODUCT SEARCH ROUTE +++
+GET {{API_URL}}/api/products/search?category=all&query=all&price=all&rating=all&order=newest&page=29
+
+### PRODUCT SEARCH ROUTE +++
+GET {{API_URL}}/api/products/search?category=furniture&query=all&price=all&rating=all&order=newest&page=1
+
+### PRODUCT SEARCH ROUTE +++
+GET {{API_URL}}/api/products/search?query=iphone&category=all&price=all
+
+
+### PRODUCT SEARCH ROUTE +++
+GET {{API_URL}}/api/products/search?query=all&category=all&price=all&pageSize=6
+
+### PRODUCT SLUG ROUTE +++
+GET {{API_URL}}/api/products/slug/epson-printer
+
+
+### PRODUCT SLUG ROUTE +++
+GET {{API_URL}}/api/products/slug/2
+
+### SEED ROUTE +++
+############### ATTENTION - DO NOT USE ###################
+GET {{API_URL}}/api/seed
+
+#########################################
+
+### SIGNIN ROUTE +++
+POST {{API_URL}}/api/users/signin
+Content-type:application/json
+
+{
+    "email":"hbingley1@plala.or.jp",
+    "password": "gf5498fsglö?++df3489!!fds23"
+}
+
+### SIGNIN ROUTE +++
+POST {{API_URL}}/api/users/signin
+Content-type:application/json
+
+{
+    "email":"aaa@example.com",
+    "password": "123456"
+}
+
+
+### SIGNUP ROUTE ---
+POST {{API_URL}}/api/users/signup
+
+Content-type:application/json
+
+{
+    "email":"eee@example.com",
+    "password": "b234asd",
+    "name":"aaa",
+    "isAdmin":false
+}
+
+### POST NEW PRODUCT ROUTE +++
+POST {{API_URL}}/api/products
+Content-type:application/json
+Authorization : Bearer {{TOKEN}}
+
+{
+    
+
+    "name": "iPhone 10",
+    "slug": "iphone-10",
+    "thumbnail": "https://dummyjson.com/image/i/products/1/thumbnail.jpg",
+    "images": [
+      "https://dummyjson.com/image/i/products/1/1.jpg",
+      "https://dummyjson.com/image/i/products/1/2.jpg",
+      "https://dummyjson.com/image/i/products/1/3.jpg",
+      "https://dummyjson.com/image/i/products/1/4.jpg",
+      "https://dummyjson.com/image/i/products/1/thumbnail.jpg"
+    ],
+    "brand": "Apple",
+    "category": "smartphones",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 549,
+    "stock": 94,
+    "reviews": [
+      {
+        "name": "Gayle Krajcik",
+        "comment": "Esse quis mollit officia quis ex est nisi non anim fugiat. Occaecat commodo consequat mollit mollit velit. Consequat magna nisi id non occaecat anim magna.\nIrure officia quis ullamco sunt non voluptate nulla. Proident ullamco non consequat do ipsum veniam et ea. Qui pariatur sunt non ullamco enim nulla laboris adipisicing dolor laboris qui incididunt deserunt.",
+        "rating": 1,
+        "_id": "6331a4d20682855e6eb1bbac",
+        "createdAt": "2022-09-26T13:10:42.761Z",
+        "updatedAt": "2022-09-26T13:10:42.761Z"
+      }
+    ],
+    "discountPercentage": 12.96,
+  
+}
+
+### UPDATE PRODUCT ROUTE +++
+PUT {{API_URL}}/api/products/633154e59afb0c41836f1350
+Content-type:application/json
+Authorization : Bearer {{TOKEN}}
+
+
+{
+    
+
+    "name": "iPhone 11",
+    "slug": "iphone-11",
+    "brand": "Apple",
+    "category": "smartphones",
+    "description": "An apple mobile which is nothing like apple",
+
+  
+}
+
+### DELETE PRODUCT ROUTE +++
+DELETE {{API_URL}}/api/products/633154e59afb0c41836f1350
+Content-type:application/json
+Authorization : Bearer {{TOKEN}}
+
