@@ -13,21 +13,16 @@ meetupRouter.get("/", async (req, res) => {
 
 meetupRouter.post(
   "/",
-  isAuth,
-  isAdmin,
+  // isAuth,
+  // isAdmin,
   expressAsyncHandler(async (req, res) => {
     const newMeetup = new Meetup({
-      name: req.body.name || "sample name " + Date.now(),
-      slug: req.body.slug || "sample-name-" + Date.now(),
-      thumbnail: req.body.thumbnail || "sample thumbnail ",
+      title: req.body.title || "sample title " + Date.now(),
       images: req.body.images || "/images/p1.jpg",
-      price: req.body.price || 0,
       category: req.body.category || "sample category",
-      brand: req.body.brand || "sample brand",
-      stock: req.body.stock || 0,
       reviews: req.body.reviews || [],
       description: req.body.desciption || "sample description",
-      discountPercentage: req.body.discountPercentage || 0,
+      isFavorite: req.body.isFavorite || false,
     });
     const meetup = await newMeetup.save();
     res.send({ message: "Meetup Created", meetup });
@@ -36,23 +31,18 @@ meetupRouter.post(
 
 meetupRouter.put(
   "/:id",
-  isAuth,
-  isAdmin,
+  // isAuth,
+  // isAdmin,
   expressAsyncHandler(async (req, res) => {
     const meetupId = req.params.id;
     const meetup = await Meetup.findById(meetupId);
     if (meetup) {
-      meetup.name = req.body.name;
-      meetup.slug = req.body.slug;
-      meetup.price = req.body.price;
+      meetup.title = req.body.title;
       meetup.images = req.body.images;
-      meetup.thumbnail = req.body.thumbnail;
       meetup.category = req.body.category;
-      meetup.brand = req.body.brand;
-      meetup.stock = req.body.stock;
       meetup.description = req.body.description;
-      meetup.discountPercentage = req.body.discountPercentage;
       meetup.reviews = req.body.reviews;
+      meetup.isFavorite = req.body.isFavorite;
 
       await meetup.save();
       res.send({ message: "Meetup Updated" });
@@ -64,8 +54,8 @@ meetupRouter.put(
 
 meetupRouter.delete(
   "/:id",
-  isAuth,
-  isAdmin,
+  // isAuth,
+  // isAdmin,
   expressAsyncHandler(async (req, res) => {
     const meetup = await Meetup.findById(req.params.id);
     if (meetup) {
@@ -79,7 +69,7 @@ meetupRouter.delete(
 
 meetupRouter.post(
   "/:id/reviews",
-  isAuth,
+  // isAuth,
   expressAsyncHandler(async (req, res) => {
     const meetupId = req.params.id;
     const meetup = await Meetup.findById(meetupId);
@@ -116,8 +106,8 @@ const PAGE_SIZE = 6;
 
 meetupRouter.get(
   "/admin",
-  isAuth,
-  isAdmin,
+  // isAuth,
+  // isAdmin,
   expressAsyncHandler(async (req, res) => {
     const { query } = req;
     const page = query.page || 1;
@@ -230,14 +220,14 @@ meetupRouter.get(
   })
 );
 
-meetupRouter.get("/slug/:slug", async (req, res) => {
-  const meetup = await Meetup.findOne({ slug: req.params.slug });
-  if (meetup) {
-    res.send(meetup);
-  } else {
-    res.status(404).send({ message: "Meetup Not Found" });
-  }
-});
+// meetupRouter.get("/slug/:slug", async (req, res) => {
+//   const meetup = await Meetup.findOne({ slug: req.params.slug });
+//   if (meetup) {
+//     res.send(meetup);
+//   } else {
+//     res.status(404).send({ message: "Meetup Not Found" });
+//   }
+// });
 
 meetupRouter.get("/:id", async (req, res) => {
   try {

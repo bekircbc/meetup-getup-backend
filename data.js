@@ -40,6 +40,7 @@ const data = {
       category: "Meetup",
       description:
         "This is an amazing meetup which you definitely should not miss.",
+      isFavorite: true,
       reviews: [
         {
           userName: "lover64",
@@ -72,6 +73,8 @@ const data = {
 
       description:
         "This is an amazing meetup which you definitely should not miss.",
+      isFavorite: true,
+
       reviews: [
         {
           userName: "lover64",
@@ -102,6 +105,8 @@ const data = {
 
       description:
         "This is an amazing meetup which you definitely should not miss.",
+      isFavorite: true,
+
       reviews: [
         {
           userName: "lover64",
@@ -131,6 +136,7 @@ const data = {
       description:
         "This is an amazing meetup which you definitely should not miss.",
       category: "Meetup",
+      isFavorite: true,
 
       reviews: [
         {
@@ -161,6 +167,7 @@ const data = {
       description:
         "This is an amazing meetup which you definitely should not miss.",
       category: "Meetup",
+      isFavorite: true,
 
       reviews: [
         {

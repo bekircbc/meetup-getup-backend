@@ -20,6 +20,7 @@ const meetupSchema = new mongoose.Schema(
     description: { type: String, required: true },
     averageRating: { type: Number },
     reviews: [reviewSchema],
+    isFavorite: { type: Boolean, required: true },
   },
   {
     timestamps: true,
