@@ -1,10 +1,20 @@
-import mongoose from "mongoose";
+import mongoose, { Schema } from "mongoose";
+// import User from "./userModel.js";
 
 const reviewSchema = new mongoose.Schema(
   {
     userName: { type: String },
     comment: { type: String },
     rating: { type: Number },
+  },
+  {
+    timestamps: true,
+  }
+);
+
+const ownerSchema = new mongoose.Schema(
+  {
+    type: Schema.Types.ObjectId,
   },
   {
     timestamps: true,
@@ -20,7 +30,7 @@ const meetupSchema = new mongoose.Schema(
     description: { type: String, required: true },
     averageRating: { type: Number },
     reviews: [reviewSchema],
-    isFavorite: { type: Boolean, required: true },
+    owner: [ownerSchema],
   },
   {
     timestamps: true,
