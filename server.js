@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import path from "path";
 
-import userRouter from "./routes/userRoutes.js";
+// import userRouter from "./routes/userRoutes.js";
 
 import meetupRouter from "./routes/meetupRoutes.js";
 
@@ -32,7 +32,7 @@ app.set("trust proxy", 1);
 
 app.use("/api/seed", seedRouter);
 app.use("/api/meetups", meetupRouter);
-app.use("/api/users", userRouter);
+// app.use("/api/users", userRouter);
 // app.use("/api/orders", orderRouter);
 
 const __dirname = path.resolve();

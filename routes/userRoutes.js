@@ -2,14 +2,14 @@ import express from "express";
 import bcrypt from "bcryptjs";
 import expressAsyncHandler from "express-async-handler";
 import User from "../models/userModel.js";
-import { isAuth, isAdmin, generateToken } from "../utils.js";
+// import { isAuth, isAdmin, generateToken } from "../utils.js";
 
 const userRouter = express.Router();
 
 userRouter.get(
   "/",
-  isAuth,
-  isAdmin,
+  // isAuth,
+  // isAdmin,
   expressAsyncHandler(async (req, res) => {
     const users = await User.find({});
     res.send(users);
@@ -18,8 +18,8 @@ userRouter.get(
 
 userRouter.get(
   "/:id",
-  isAuth,
-  isAdmin,
+  // isAuth,
+  // isAdmin,
   expressAsyncHandler(async (req, res) => {
     const user = await User.findById(req.params.id);
     if (user) {
@@ -32,8 +32,8 @@ userRouter.get(
 
 userRouter.put(
   "/:id",
-  isAuth,
-  isAdmin,
+  // isAuth,
+  // isAdmin,
   expressAsyncHandler(async (req, res) => {
     const user = await User.findById(req.params.id);
     if (user) {
@@ -50,8 +50,8 @@ userRouter.put(
 
 userRouter.delete(
   "/:id",
-  isAuth,
-  isAdmin,
+  // isAuth,
+  // isAdmin,
   expressAsyncHandler(async (req, res) => {
     const user = await User.findById(req.params.id);
     if (user) {
@@ -108,7 +108,7 @@ userRouter.post(
 
 userRouter.put(
   "/profile",
-  isAuth,
+  // isAuth,
   expressAsyncHandler(async (req, res) => {
     const user = await User.findById(req.user._id);
     if (user) {

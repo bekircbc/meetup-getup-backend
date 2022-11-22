@@ -1,7 +1,7 @@
 import express from "express";
 import expressAsyncHandler from "express-async-handler";
 import Meetup from "../models/meetupModel.js";
-import { isAuth, isAdmin } from "../utils.js";
+// import { isAuth, isAdmin } from "../utils.js";
 import path from "path";
 
 const meetupRouter = express.Router();
@@ -20,6 +20,7 @@ meetupRouter.post(
       title: req.body.title || "sample title " + Date.now(),
       images: req.body.images || "/images/p1.jpg",
       category: req.body.category || "sample category",
+      address: req.body.address || "sample street 39/A",
       reviews: req.body.reviews || [],
       description: req.body.desciption || "sample description",
       isFavorite: req.body.isFavorite || false,
