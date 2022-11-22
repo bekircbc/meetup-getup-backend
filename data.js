@@ -45,7 +45,7 @@ const data = {
       images: [
         "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/800px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg",
       ],
-      adress: "Meetupstreet5, 12345 Meetup City",
+      address: "Meetupstreet5, 12345 Meetup City",
       category: "Meetup",
       description:
         "This is an amazing meetup which you definitely should not miss.",
@@ -76,7 +76,7 @@ const data = {
       images: [
         "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Buildings_in_Amsterdam_IMG_5153.jpg/800px-Buildings_in_Amsterdam_IMG_5153.jpg",
       ],
-      adress: "Meetupstreet5, 12345 Meetup City",
+      address: "Meetupstreet5, 12345 Meetup City",
       category: "Meetup",
       description:
         "This is an amazing meetup which you definitely should not miss.",
@@ -106,7 +106,7 @@ const data = {
     {
       title: "Düsseldorf",
       images: ["https://picsum.photos/520/460"],
-      adress: "Meetupstreet5, 12345 Meetup City",
+      address: "Meetupstreet5, 12345 Meetup City",
       category: "Meetup",
 
       description:
@@ -137,7 +137,7 @@ const data = {
     {
       title: "Berlin",
       images: ["https://picsum.photos/521/461"],
-      adress: "Meetupstreet5, 12345 Meetup City",
+      address: "Meetupstreet5, 12345 Meetup City",
       description:
         "This is an amazing meetup which you definitely should not miss.",
       category: "Meetup",
@@ -166,7 +166,7 @@ const data = {
     {
       title: "Dresden",
       images: ["https://picsum.photos/522/462"],
-      adress: "Meetupstreet5, 12345 Meetup City",
+      address: "Meetupstreet5, 12345 Meetup City",
       description:
         "This is an amazing meetup which you definitely should not miss.",
       category: "Meetup",

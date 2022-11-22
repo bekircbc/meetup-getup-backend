@@ -12,25 +12,26 @@ const reviewSchema = new mongoose.Schema(
   }
 );
 
-const ownerSchema = new mongoose.Schema(
-  {
-    type: Schema.Types.ObjectId,
-  },
-  {
-    timestamps: true,
-  }
-);
+// const ownerSchema = new mongoose.Schema(
+//   {
+//     type: Schema.Types.ObjectId,
+//   },
+//   {
+//     timestamps: true,
+//   }
+// );
 
 const meetupSchema = new mongoose.Schema(
   {
-    title: { type: String, required: true, unique: true },
-    adress: { type: String, required: true },
+    title: { type: String, required: true },
+    address: { type: String, required: true },
     images: [String],
     category: { type: String, required: true },
     description: { type: String, required: true },
     averageRating: { type: Number },
     reviews: [reviewSchema],
-    owner: [ownerSchema],
+    owner: { type: Schema.Types.ObjectId },
+    isFavorite: { type: Boolean, required: true, default: false },
   },
   {
     timestamps: true,

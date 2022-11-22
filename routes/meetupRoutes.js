@@ -38,6 +38,7 @@ meetupRouter.put(
     const meetup = await Meetup.findById(meetupId);
     if (meetup) {
       meetup.title = req.body.title;
+      meetup.address = req.body.address;
       meetup.images = req.body.images;
       meetup.category = req.body.category;
       meetup.description = req.body.description;
